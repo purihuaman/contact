@@ -1,0 +1,79 @@
+<div class="bg-dark text-white">
+	<section class="container">
+		<div>
+			<h2 class="text-center">{{ title | titlecase }}</h2>
+		</div>
+
+		<div class="py-3">
+			<form action="#" class="form-group row needs-validation" novalidate>
+				<div class="form-group col-md-3 mb-2">
+					<label for="firstname">Nombre</label>
+					<input
+						type="text"
+						name="firstname"
+						id="firstname"
+						class="form-control text-white bg-dark"
+						placeholder="Nombre..."
+						[(ngModel)]="firstname"
+					/>
+				</div>
+
+				<div class="form-group col-md-3 mb-2">
+					<label for="surname">Apellidos</label>
+					<input
+						type="text"
+						name="surname"
+						id="surname"
+						class="form-control text-white bg-dark"
+						placeholder="Apellidos..."
+						[(ngModel)]="surname"
+					/>
+				</div>
+
+				<div class="form-group col-md-3 mb-2">
+					<label for="email">Correo</label>
+					<input
+						type="text"
+						name="email"
+						id="email"
+						class="form-control text-white bg-dark"
+						placeholder="Correo..."
+						[(ngModel)]="email"
+					/>
+				</div>
+
+				<div class="form-group col-md-3 mb-2">
+					<label for="phoneNumber">Teléfono</label>
+					<input
+						type="tel"
+						name="phoneNumber"
+						id="phoneNumber"
+						class="form-control text-white bg-dark"
+						minlength="9"
+						maxlength="9"
+						placeholder="999 999 999"
+						[(ngModel)]="phoneNumber"
+					/>
+				</div>
+
+				<div class="form-group col-md-3 mb-2">
+					<button class="btn btn-primary me-2" [routerLink]="['']">
+						Ir a inicio
+					</button>
+
+					<button
+						type="submit"
+						class="btn btn-primary"
+						[ngClass]="{
+							'btn-danger': action === 'eliminar',
+							'btn-success': action === 'actualizar'
+						}"
+						(click)="deleteAndUpdateAction()"
+					>
+						{{ action | titlecase }}
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,33 @@
+<div class="row">
+	<article
+		*ngFor="let contact of contacts; let index = index"
+		class="col-lg-3 col-md-4 col-sm-6 mb-3 mb-sm-0"
+	>
+		<div class="card h-100 bg-dark text-white text-center">
+			<div class="card-body position-relative">
+				<span class="position-absolute d-block text-primary">{{ index }}</span>
+				<h5 class="card-title">
+					{{ contact.firstname | titlecase }} {{ contact.surname | titlecase }}
+				</h5>
+				<span class="card-text fw-bold d-block">{{ contact.phoneNumber }}</span>
+				<p class="card-text text-secondary">
+					<small>{{ contact.email }}</small>
+				</p>
+			</div>
+			<footer class="mb-3">
+				<a
+					[routerLink]="['/update/' + index]"
+					[queryParams]="{ accion: '1' }"
+					class="btn btn-success me-2"
+					>Editar</a
+				>
+				<a
+					[routerLink]="['/update/0' + index]"
+					[queryParams]="{ accion: '0' }"
+					class="btn btn-danger"
+					>Eliminar</a
+				>
+			</footer>
+		</div>
+	</article>
+</div>
