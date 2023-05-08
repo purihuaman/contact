@@ -43,6 +43,14 @@ export class ContactsComponent {
 			);
 
 			this.contactsService.saveContact(myContact);
+			this.cleanFields();
 		}
+	}
+
+	cleanFields(): void {
+		this.firstname = "";
+		this.surname = "";
+		this.email = "";
+		this.phoneNumber = 0;
 	}
 }

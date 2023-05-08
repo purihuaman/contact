@@ -1,1 +1,29 @@
+<header class="bg-dark">
+	<div class="container">
+		<nav class="navbar gap-2 bg-dark text-white">
+			<a class="navbar-brand text-white" href="/">
+				<!-- <img
+					src="/docs/5.3/assets/brand/bootstrap-logo.svg"
+					alt="Bootstrap"
+					width="30"
+					height="24"
+				/> -->
+				Bootstrap
+			</a>
+
+			<a
+				*ngIf="!login()"
+				[routerLink]="['login']"
+				class="btn btn-primary btn-sm ms-auto"
+			>
+				Iniciar sesión
+			</a>
+
+			<a *ngIf="login()" (click)="logout()" class="btn btn-primary btn-sm">
+				Cerrar sesión
+			</a>
+		</nav>
+	</div>
+</header>
+
 <router-outlet></router-outlet>

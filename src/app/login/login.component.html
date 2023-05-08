@@ -1,0 +1,53 @@
+<div class="bg-dark text-white">
+	<div
+		class="container min-vh-100 d-flex align-items-center justify-content-center"
+	>
+		<form
+			class="row g-3 bg-dark shadow p-4 rounded form"
+			#form="ngForm"
+			(ngSubmit)="login(form)"
+		>
+			<div class="col-12">
+				<label for="validationServerUsername" class="form-label">Email</label>
+				<div class="input-group has-validation flex-column">
+					<!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+					<input
+						type="email"
+						class="form-control w-100 is-invalids"
+						id="validationServerUsername"
+						aria-describedby="inputGroupPrepend3
+					validationServerUsernameFeedback"
+						required
+						name="email"
+						placeholder="Email"
+						[(ngModel)]="email"
+					/>
+					<!-- <div id="validationServerUsernameFeedback" class="invalid-feedback">
+						Por favor ingrese email.
+					</div> -->
+				</div>
+			</div>
+
+			<div class="col-12">
+				<label for="validationServer05" class="form-label">Contraseña</label>
+				<input
+					type="text"
+					class="form-control d-block is-invalids"
+					id="validationServer05"
+					aria-describedby="validationServer05Feedback"
+					required
+					name="password"
+					placeholder="Contraseña"
+					[(ngModel)]="password"
+				/>
+				<!-- <div id="validationServer05Feedback" class="invalid-feedback">
+					Por favor ingrese su contraseña.
+				</div> -->
+			</div>
+
+			<div class="col-12">
+				<button class="btn btn-primary" type="submit">Iniciar sesión</button>
+			</div>
+		</form>
+	</div>
+</div>

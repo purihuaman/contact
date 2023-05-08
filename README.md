@@ -14,6 +14,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+<!--
+    Esto por si se va a desplegar en una subcarpeta de algun dominio.
+    - Se agrega al final del comando del build
+    --base-href /nombre_carpeta
+-->
+
+```
+ng build --configuration production --aot
+```
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -25,3 +35,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<!--
+    1. Crea un cv que puedas a adaptar a la posición a la que apliques.
+    2. Trabájate tu propia red de contactos (EL NETGUORQUIN)
+    3. Aprovecha la ventaja añadida del sector: los canales de ofertas
+    4.
+-->
+
+<!--  -->
